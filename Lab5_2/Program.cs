@@ -14,17 +14,33 @@ namespace Lab5_2
 
     class Car
     {//make these public until tested. then protected...
-        public CarMake Make;//fine
-        public string Model;
-        public int Year;
-        public decimal Price;
+        protected CarMake Make;//fine
+        protected string Model;
+        protected int Year;
+        protected decimal Price;
 
         //do i need a defaul const?
         public Car(CarMake _Make, string _Model, int _Year, decimal _Price)//works
         {
+            SetMake(_Make);
+            SetModel(_Model);
+            SetYear(_Year);
+            SetPrice(_Price);
+        }
+        public void SetMake(CarMake _Make)
+        {
             Make = _Make;
+        }
+        public void SetModel(string _Model)
+        {
             Model = _Model;
+        }
+        public void SetYear(int _Year)
+        {
             Year = _Year;
+        }
+        public void SetPrice(decimal _Price)
+        {
             Price = _Price;
         }
     }
@@ -69,26 +85,26 @@ namespace Lab5_2
                 //testcar.Make = CarMake.Chevrolet;
                 //Console.WriteLine(testcar.Make);
                 Car test = new Car(CarMake.Ford, "Fiesta", 2001, 19000.00m);
-                Console.WriteLine(test.Make);
-                Console.WriteLine(test.Model);
-                Console.WriteLine(test.Price);
-                Console.WriteLine(test.Year);
+                //Console.WriteLine(test.Make);
+                //Console.WriteLine(test.Model);
+                //Console.WriteLine(test.Price);
+                //Console.WriteLine(test.Year);
 
                 NewCar nc1 = new NewCar(CarMake.Honda, "Civic", 1999, 2000.00m, false);
              
-                Console.WriteLine(nc1.ToString());
-                Console.WriteLine(nc1.Model);//this works
-                Console.WriteLine( nc1.Year);
-                Console.WriteLine(nc1.Price);
+                //Console.WriteLine(nc1.ToString());
+                //Console.WriteLine(nc1.Model);//this works
+                //Console.WriteLine( nc1.Year);
+                //Console.WriteLine(nc1.Price);
             Console.WriteLine(nc1.ExtendedWarranty);
 
             UsedCar uc1 = new UsedCar(CarMake.Toyota, "Tacoma", 2010, 15000.00m, 1, 101345);
-            Console.WriteLine(uc1.ToString());
-            Console.WriteLine(uc1.Model);//this works
-            Console.WriteLine(uc1.Year);
-            Console.WriteLine(uc1.Price);
-            Console.WriteLine(uc1.NumberofOwners);
-            Console.WriteLine(uc1.Mileage);
+            //Console.WriteLine(uc1.ToString());
+            //Console.WriteLine(uc1.Model);//this works
+            //Console.WriteLine(uc1.Year);
+            //Console.WriteLine(uc1.Price);
+            //Console.WriteLine(uc1.NumberofOwners);
+            //Console.WriteLine(uc1.Mileage);
 
 
 
