@@ -24,7 +24,7 @@ namespace Lab5_2
             Make = _Make;
             Model = _Model;
             Year = _Year;
-            Price = _Price;
+            Price = _Price;//stuff
         } 
 
     }
@@ -37,7 +37,13 @@ namespace Lab5_2
             //Car testcar = new Car();
             //testcar.Make = CarMake.Chevrolet;
             //Console.WriteLine(testcar.Make);
-            
+            Car test = new Car(CarMake.Ford, "Fiesta", 2001, 19000.00m);
+            Console.WriteLine(test.Make);
+            Console.WriteLine(test.Model);
+            Console.WriteLine(test.Price);
+            Console.WriteLine(test.Year);
+
+
         }
     }
 }
