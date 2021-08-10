@@ -6,7 +6,7 @@ namespace Lab5_2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("checking it out");
+            Console.WriteLine("ctest");
         }
     }
 }
